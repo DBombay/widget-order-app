@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  color: MyString
+  quantity: 1
+  need_by: 2019-08-26 10:12:29
+
+two:
+  type: 
+  color: MyString
+  quantity: 1
+  need_by: 2019-08-26 10:12:29
