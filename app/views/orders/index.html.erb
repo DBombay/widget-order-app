@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="6">Order Id</th>
+      <th colspan="6">Description</th>
+      <th colspan="6">Need By Date</th>
+      <th colspan="6">Options</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td colspan="6"><%= link_to order.id, order %></td>
+        <td colspan="6">
+          <%= "#{order.quantity} #{order.color} #{order.widget_type.pluralize(order.quantity)}"%>
+        </td>
+        <td colspan="6"><%= order.need_by.strftime("%D") %></td>
+        <td colspan="6">
+          <%= link_to 'Edit', edit_order_path(order) %> | <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div><%= "No orders at this time" if @orders.empty? %></div>
+<div><%= link_to 'New Order', new_order_path %></div>

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Order <%= @order.id%></h1>
+
+<div colspan="6">
+  <strong>Description:</strong>
+  <%= "#{@order.quantity} #{@order.color} #{@order.widget_type.pluralize(@order.quantity)}"%>
+</div>
+
+<div colspan="6">
+  <strong>Need by:</strong>
+  <%= @order.need_by.strftime("%D") %>
+</div>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
