@@ -1,4 +1,4 @@
-Widget Order Form
+Widget Order App
 ===
 
 Basic Rails 6 application satisfying the initial requirements for the challenge
@@ -7,6 +7,7 @@ Basic Rails 6 application satisfying the initial requirements for the challenge
 Details
 ---
 *Ruby Version:* **2.5.5**
+
 *Rails Version:* **6.0.0**
 
 Setup
