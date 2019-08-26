@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_08_26_141229) do
   enable_extension "plpgsql"
 
   create_table "orders", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "type"
+    t.string "widget_type"
     t.string "color"
     t.integer "quantity"
     t.datetime "need_by"
